@@ -3,8 +3,8 @@ package task3exercise1;
 public class AppStore {
     
     // 1. Declare your private attributes here:
-    // NIM : .........................., 
-    // NAMA : ........................., 
+    // NIM : 1301154259 
+    // NAMA : Anggi Pratama Nasution 
     //
     //------------------- your code here-----------------------
     private Application [] appList = new Application [100];
@@ -13,8 +13,8 @@ public class AppStore {
     //---------------------------------------------------------
     
     // 2. Declare your Setter and Getter method here:
-    // NIM : .........................., 
-    // NAMA : ........................., 
+    // NIM : 1301154259 
+    // NAMA : Anggi Pratama Nasution 
     //
     public void setAppList(Application[] appList) {
         this.appList = appList;
@@ -34,8 +34,8 @@ public class AppStore {
    
     
     // 3. Create method createNewApp( appName, appSize ) here:
-    // NIM : .........................., 
-    // NAMA : ........................., 
+    // NIM : 1301154259 
+    // NAMA : Anggi Pratama Nasution 
     // instantiate new Application object and insert it in array appList
     //
     //------------------- your code here-----------------------
@@ -52,8 +52,8 @@ public class AppStore {
     
     
     // 4. Create method getApp( id ) : Application here:
-    // NIM : .........................., 
-    // NAMA : ........................., 
+    // NIM : 1301154259 
+    // NAMA : Anggi Pratama Nasution
     // returns Application object from array appList with array index = id
     //
     //------------------- your code here-----------------------
@@ -64,8 +64,8 @@ public class AppStore {
         
     
     // 5. Create method toString() : String here:
-    // NIM : .........................., 
-    // NAMA : ........................., 
+    // NIM : 1301154259 
+    // NAMA : Anggi Pratama Nasution
     // @return returns String that contains the number of Application available
     // 
     // example : "There are 5 applications ready to install"
