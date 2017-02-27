@@ -7,17 +7,31 @@ public class AppStore {
     // NAMA : ........................., 
     //
     //------------------- your code here-----------------------
-    
+    private Application [] appList = new Application [100];
+    private int totalApp;
+    private int i;
     //---------------------------------------------------------
     
     // 2. Declare your Setter and Getter method here:
     // NIM : .........................., 
     // NAMA : ........................., 
     //
-    //------------------- your code here-----------------------
-    
-    //---------------------------------------------------------
-    
+    public void setAppList(Application[] appList) {
+        this.appList = appList;
+    }
+
+    public void setTotalApp(int totalApp) {
+        this.totalApp = totalApp;
+    }
+
+    public Application[] getAppList() {
+        return appList;
+    }
+
+    public int getTotalApp() {
+        return totalApp;
+    }
+   
     
     // 3. Create method createNewApp( appName, appSize ) here:
     // NIM : .........................., 
@@ -25,6 +39,14 @@ public class AppStore {
     // instantiate new Application object and insert it in array appList
     //
     //------------------- your code here-----------------------
+    public void createNewApp (String appName,int appSize){
+        if (i < 100){
+            Application apps = new Application(appName,appSize);
+            appList[totalApp] = apps;
+            totalApp++;
+            i++;
+        }
+    }
     
     //---------------------------------------------------------
     
@@ -35,7 +57,9 @@ public class AppStore {
     // returns Application object from array appList with array index = id
     //
     //------------------- your code here-----------------------
-    
+    public Application getApp(int id) {
+        return appList[id];
+    }
     //---------------------------------------------------------
         
     
@@ -48,7 +72,7 @@ public class AppStore {
     // 
     public String toString() {
     //------------------- your code here-----------------------
-        return null;
+        return "There are " +totalApp+ "applications ready to install" ;
     
     //---------------------------------------------------------
     }

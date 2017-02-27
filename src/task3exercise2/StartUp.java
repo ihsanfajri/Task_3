@@ -8,7 +8,10 @@ public class StartUp {
     // NAMA : ........................., 
     //
     //------------------- your code here-----------------------
-    
+    private Member[] member = new Member[50];
+    private Project[] projectList = new Project [50];
+    private int nMember = 0;
+    private int nProject = 0;
     //---------------------------------------------------------
     
     // 2. Declare your Constructor here:
@@ -16,7 +19,7 @@ public class StartUp {
     // NAMA : ........................., 
     //
     //------------------- your code here-----------------------
-    
+        
     //---------------------------------------------------------
     
     
@@ -25,7 +28,21 @@ public class StartUp {
     // NAMA : ........................., 
     //
     //------------------- your code here-----------------------
-    
+    public void setMember(Member[] member) {
+        this.member = member;
+    }
+
+    public void setProjectList(Project[] projectList) {
+        this.projectList = projectList;
+    }
+
+    public void setnMember(int nMember) {
+        this.nMember = nMember;
+    }
+
+    public void setnProject(int nProject) {
+        this.nProject = nProject;
+    }
     //---------------------------------------------------------
     
     
@@ -37,7 +54,11 @@ public class StartUp {
     // increment integer nMember+1
     //
     //------------------- your code here-----------------------
-    
+    public void addMember (Member m)
+    {
+        this.member[nMember] = m;
+        nMember++;
+    }
     //---------------------------------------------------------
     
     
@@ -48,7 +69,10 @@ public class StartUp {
     // returns Member object from array member with array index = id
     //
     //------------------- your code here-----------------------
-    
+    public Member getMember (int id)
+    {
+       return member[id];
+    }
     //---------------------------------------------------------
     
     
@@ -60,7 +84,12 @@ public class StartUp {
     // increment integer nProject+1
     //
     //------------------- your code here-----------------------
-    
+    public void createNewProject (String projectName)
+    {
+        Project proj = new Project(projectName);
+        projectList[nProject] = proj;
+        nProject++;
+    }
     //---------------------------------------------------------
     
     
@@ -71,7 +100,10 @@ public class StartUp {
     // returns Project object from array projectList with array index = id
     //
     //------------------- your code here-----------------------
-    
+    public Project getProject (int id)
+    {
+        return projectList[id];
+    }
     //---------------------------------------------------------
     
     
@@ -82,7 +114,10 @@ public class StartUp {
     // set release status of object Project p by invoking method releaseApp()
     //
     //------------------- your code here-----------------------
-    
+    public void releaseProject (Project p)
+    {
+       p.releaseApp();
+    }
     //---------------------------------------------------------
     
     
@@ -93,8 +128,17 @@ public class StartUp {
     // returns number of project with status is released
     //
     //------------------- your code here-----------------------
-    
+    public int getNumReleasedProject()
+    {
+        int num = 0;
+        for (int i = 0; i < nProject; i++){
+            if (projectList[i].isReleaseStatus() != false){
+                num += 1;
+            }
+        }
+        return num;                
+    }
     //---------------------------------------------------------
-    
-    
+
+
 }
